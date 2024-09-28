@@ -1,7 +1,8 @@
 const assetsUrl = "https://www.themoviedb.org/t/p/w220_and_h330_face/";
+import { Movie } from "../../@types/movie";
 import "./styles.css";
 
-export default function MovieItem({ movie }) {
+export default function MovieItem({ movie }: { movie: Movie }) {
   return (
     <div className="movie-item">
       <header className="movie-item-header">
@@ -17,7 +18,9 @@ export default function MovieItem({ movie }) {
       </header>
 
       <div className="movie-item__title__container">
-        <h4 className="movie-item__title" title={movie.title}>{movie.title}</h4>
+        <h4 className="movie-item__title" title={movie.title}>
+          {movie.title}
+        </h4>
       </div>
     </div>
   );
