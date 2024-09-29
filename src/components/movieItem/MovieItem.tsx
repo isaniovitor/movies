@@ -12,10 +12,9 @@ export default function MovieItem({ movie }: { movie: Movie }) {
           alt=""
           draggable={false}
         />
-        {/* {movie.featured && (
-          <span className="movie-item__badge">Em destaque</span>
-        )} */}
       </header>
+
+      {movie.featured && <span className="movie-item__badge">Em destaque</span>}
 
       <div className="movie-item__title__container">
         <h4 className="movie-item__title" title={movie.title}>
