@@ -3,8 +3,8 @@ import { MovieFilters } from "../../@types/movie";
 import Select from "../form/select/select";
 import genres from "../../data/genres.json";
 import { initialFilters } from "../../App";
-import "./styles.css";
 import Toggle from "../form/toggle/toggle";
+import "./styles.css";
 
 type FiltersProps = {
   filters: MovieFilters;

@@ -1,10 +1,15 @@
-const assetsUrl = "https://www.themoviedb.org/t/p/w220_and_h330_face/";
 import { Movie } from "../../@types/movie";
+import { assetsUrl } from "../../utils/constants";
 import "./styles.css";
 
-export default function MovieItem({ movie }: { movie: Movie }) {
+type MovieItemProps = {
+  movie: Movie;
+  onClick: () => void;
+};
+
+export default function MovieItem({ movie, onClick }: MovieItemProps) {
   return (
-    <div className="movie-item">
+    <div className="movie-item" onClick={onClick}>
       <header className="movie-item-header">
         <img
           className="movie-item__poster"
