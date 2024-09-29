@@ -1,10 +1,11 @@
-import MovieItem from "../movieItem/MovieItem.tsx";
-import movies from "../../data/popular.json";
-import "./styles.css";
+import MovieItem from "../movieItem/MovieItem";
 import { Movie } from "../../@types/movie.js";
+import "./styles.css";
 
-export default function MoviesList() {
-  const moviesItems = movies.map((movie: Movie, index: number) => (
+type MoviesListProps = { movies: Movie[] };
+
+export default function MoviesList({ movies }: MoviesListProps) {
+  const moviesItems = movies.map((movie: Movie) => (
     <MovieItem key={movie.id} movie={movie} />
   ));
 
