@@ -7,3 +7,11 @@ export const handleClickOutside = (
     callback();
   }
 };
+
+export const removeDuplicateItems = <T extends { id: number }>(
+  array: T[]
+): T[] => {
+  return array.filter(
+    (item, index, self) => index === self.findIndex((obj) => obj.id === item.id)
+  );
+};
