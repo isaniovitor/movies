@@ -1,5 +1,12 @@
 .movie-item {
   position: relative;
+  cursor: pointer;
+
+  transition: transform 0.3s ease;
+}
+
+.movie-item:hover {
+  transform: scale(1.05);
 }
 
 .movie-item-header {
@@ -9,7 +16,7 @@
 .movie-item__poster {
   display: block;
 
-  width: 100%
+  width: 100%;
 }
 
 .movie-item__title__container {
@@ -18,7 +25,7 @@
   width: 100%;
   padding: 10px;
 
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
 
   text-align: center;
@@ -28,11 +35,11 @@
   font-size: 1.3em;
   white-space: wrap;
 
-  display: -webkit-box;      
-  -webkit-box-orient: vertical; 
-  -webkit-line-clamp: 2;      
-  overflow: hidden;          
-  text-overflow: ellipsis; 
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   margin: 0;
 }
